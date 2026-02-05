@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>115 高三生必存｜升學重要時程懶人包</title>
+    <meta name="description" content="115級高三生2月到8月升學重要時程懶人包，包含繁星、個申、分科測驗關鍵日期。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6; /* Slate 100 */
+            color: #1e293b; /* Slate 800 */
+            overflow-x: hidden;
+            /* Dot Pattern Background */
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+
+        /* Reading Progress Bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #4f46e5; /* Indigo 600 */
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Modern Card */
+        .modern-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .modern-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Timeline Connector */
+        .timeline-line-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 24px; /* Mobile position */
+            width: 2px;
+            background: #cbd5e1;
+            z-index: 0;
+        }
+        
+        /* Desktop Center Line */
+        @media (min-width: 768px) {
+            .timeline-line-container::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header - Frosted Glass */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Custom Button */
+        .btn-modern {
+            background-color: white;
+            border: 1px solid #cbd5e1;
+            transition: all 0.2s;
+        }
+        .btn-modern:hover {
+            background-color: #f8fafc;
+            border-color: #94a3b8;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .btn-modern:active {
+            transform: scale(0.98);
+        }
+
+        /* Text Pretty */
+        .text-pretty {
+            text-wrap: pretty;
+        }
+        
+        /* Tag Styles */
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.025em;
+        }
+    </style>
+</head>
+<body class="antialiased relative min-h-screen">
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Header -->
+    <header class="glass-header fixed top-0 w-full z-50 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg tracking-wide">
+                    115 級
+                </div>
+                <h1 class="text-lg md:text-xl font-bold text-slate-800 hidden sm:block tracking-tight">升學重要時程</h1>
+                <h1 class="text-lg font-bold text-slate-800 sm:hidden">升學時程</h1>
+            </div>
+            <button id="copy-btn" onclick="copyTimelineText()" class="no-print group flex items-center gap-2 btn-modern text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-bold transition-all duration-200">
+                <i data-lucide="copy" class="w-4 h-4 shrink-0"></i>
+                <span class="hidden md:inline">複製懶人包</span>
+                <span class="md:hidden">複製</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-28 pb-20 overflow-x-hidden">
+        
+        <!-- Welcome Section -->
+        <div class="container mx-auto px-4 mb-16 max-w-4xl text-center reveal active">
+            <div class="modern-card p-8 md:p-12 relative overflow-hidden bg-white">
+                
+                <div class="flex justify-center mb-6">
+                    <div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600">
+                        <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                    </div>
+                </div>
+                
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900 tracking-tight">
+                    Hi, <span class="text-indigo-600">115 的準大學生們</span> 👋
+                </h2>
+                
+                <div class="max-w-2xl mx-auto mb-8">
+                    <p class="text-slate-600 text-lg md:text-xl leading-relaxed text-pretty font-medium">
+                        開學後就是最後衝刺了！不管是繁星、申請入學還是分科測驗，每個時間點都很關鍵。這份懶人包幫大家整理好接下來半年的重點行事曆，請存下來隨時確認進度，陪你一起戰勝升學考試！✨
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center gap-3">
+                    <div class="inline-flex flex-col sm:flex-row items-center bg-slate-50 px-4 py-2 rounded-lg text-sm md:text-base text-slate-500 font-medium text-center sm:gap-0 gap-1 text-pretty border border-slate-200">
+                        <div class="flex items-center justify-center whitespace-nowrap">
+                            <i data-lucide="info" class="w-4 h-4 mr-2 text-slate-400 shrink-0"></i>
+                            <span>資料來源：大學甄選入學委員會</span>
+                        </div>
+                        <span class="hidden sm:inline mx-2 text-slate-300">|</span>
+                        <span class="whitespace-nowrap">內壢高中楊璦慈老師整理</span>
+                    </div>
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">製作者：楊小山 CHY</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Countdown Sticky Widget -->
+        <div class="sticky top-24 z-40 container mx-auto px-4 mb-20 max-w-md reveal">
+            <div class="bg-slate-900 rounded-2xl p-6 shadow-xl text-center relative overflow-hidden group">
+                <!-- Glossy shine effect -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                
+                <div class="relative z-10">
+                    <div id="countdown-title" class="inline-block text-indigo-300 text-xs font-bold uppercase tracking-widest mb-2">
+                        距離 學測成績公布 (2/25)
+                    </div>
+                    <div class="flex justify-center items-baseline gap-2 mb-2">
+                        <span id="countdown-days" class="text-6xl font-black text-white tabular-nums tracking-tighter">--</span>
+                        <span class="text-xl font-medium text-slate-400">天</span>
+                    </div>
+                    <!-- Mini progress bar decoration -->
+                    <div class="w-16 h-1 bg-indigo-500 rounded-full mx-auto mb-2"></div>
+                    <p class="text-sm text-slate-300 font-medium">Keep Fighting! 💪</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vertical Timeline -->
+        <div class="container mx-auto px-4 timeline-line-container relative max-w-5xl">
+            
+            <!-- Feb -->
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-center w-full reveal group">
+                <!-- Date/Month Indicator -->
+                <div class="md:w-1/2 md:text-right md:pr-16 md:pl-0 pl-12 w-full mb-4 md:mb-0">
+                    <span class="text-5xl font-black text-slate-300 group-hover:text-slate-800 transition-colors duration-300 block leading-none">02</span>
+                    <span class="text-sm font-bold text-rose-500 uppercase tracking-widest">February</span>
+                </div>
+                
+                <!-- Center Dot -->
+                <div class="absolute left-[18px] md:left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rounded-full border-[3px] border-rose-500 shadow-sm z-10"></div>
+                
+                <!-- Content Card -->
+                <div class="md:w-1/2 md:pl-16 w-full pl-12">
+                    <div class="modern-card p-5 md:p-8 border-l-[4px] border-l-rose-500 relative">
+                        <div class="flex justify-start mb-4">
+                            <span class="tag bg-rose-50 text-rose-600">成績揭曉</span>
+                        </div>
+
+                        <ul class="space-y-6">
+                            <li class="group/item border-b border-slate-100 pb-4 last:border-0 last:pb-0" data-date="2/25">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">2/25</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 text-pretty">學測成績公布</h3>
+                            </li>
+                            <li class="group/item border-b border-slate-100 pb-4 last:border-0 last:pb-0" data-date="2/26">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">2/26</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 text-pretty">
+                                    開始進行 <span class="text-rose-600">落點分析</span>
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mar -->
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row-reverse items-center w-full reveal group">
+                <div class="md:w-1/2 md:text-left md:pl-16 md:pr-0 pl-12 w-full mb-4 md:mb-0">
+                    <span class="text-5xl font-black text-slate-300 group-hover:text-slate-800 transition-colors duration-300 block leading-none">03</span>
+                    <span class="text-sm font-bold text-amber-500 uppercase tracking-widest">March</span>
+                </div>
+                
+                <div class="absolute left-[18px] md:left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rounded-full border-[3px] border-amber-500 shadow-sm z-10"></div>
+                
+                <div class="md:w-1/2 md:pr-16 w-full pl-12">
+                    <div class="modern-card p-5 md:p-8 border-l-[4px] border-l-amber-500 relative">
+                        
+                        <div class="flex justify-start md:justify-end mb-4">
+                             <span class="tag bg-amber-50 text-amber-700">關鍵抉擇</span>
+                        </div>
+                        
+                        <div class="bg-amber-50/50 border border-amber-100 p-4 rounded-lg mb-6 text-base text-amber-800 text-left flex gap-3 items-start">
+                            <i data-lucide="bell" class="w-5 h-5 mt-0.5 shrink-0 text-amber-600"></i>
+                            <span class="font-medium text-pretty">注意：高中校內作業通常會提早一到兩週，請務必留意校內公告！</span>
+                        </div>
+                        
+                        <ul class="space-y-8 text-left md:text-right">
+                            <li class="group/item flex flex-col md:items-end" data-date="3/11">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">3/11 ~ 3/18</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 text-pretty">繁星推薦 <span class="text-base font-normal text-slate-500">報名與放榜</span></h3>
+                                <a href="https://www.cac.edu.tw/star115/dispense.php" target="_blank" class="inline-flex items-center text-base font-semibold text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 px-3 py-1.5 rounded-lg transition-colors -mr-2">
+                                    <i data-lucide="link" class="w-4 h-4 mr-1.5"></i> 繁星錄取結果查詢
+                                </a>
+                            </li>
+
+                            <li class="group/item flex flex-col md:items-end" data-date="3/23">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">3/23 ~ 3/25</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-1 text-pretty">申請入學報名</h3>
+                                <p class="text-base text-slate-500 font-medium text-pretty">6所大學 + 6所科大可同步進行。</p>
+                            </li>
+
+                            <li class="group/item flex flex-col md:items-end" data-date="3/31">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">3/31</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-rose-600 mb-2 text-pretty">一階篩選放榜</h3>
+                                <a href="https://www.cac.edu.tw/apply115/result.php" target="_blank" class="inline-flex items-center text-base font-semibold text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 px-3 py-1.5 rounded-lg transition-colors -mr-2 mb-3">
+                                    <i data-lucide="link" class="w-4 h-4 mr-1.5"></i> 查詢結果
+                                </a>
+                                <div class="bg-white border border-rose-100 text-rose-600 text-sm font-bold p-3 rounded-lg text-left md:text-right text-pretty shadow-sm">
+                                    🤔 思考：衝刺二階面試，還是準備分科？
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apr -->
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-center w-full reveal group">
+                <div class="md:w-1/2 md:text-right md:pr-16 md:pl-0 pl-12 w-full mb-4 md:mb-0">
+                    <span class="text-5xl font-black text-slate-300 group-hover:text-slate-800 transition-colors duration-300 block leading-none">04</span>
+                    <span class="text-sm font-bold text-emerald-500 uppercase tracking-widest">April</span>
+                </div>
+                
+                <div class="absolute left-[18px] md:left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rounded-full border-[3px] border-emerald-500 shadow-sm z-10"></div>
+                
+                <div class="md:w-1/2 md:pl-16 w-full pl-12">
+                    <div class="modern-card p-5 md:p-8 border-l-[4px] border-l-emerald-500 relative">
+                        <div class="flex justify-start mb-4">
+                             <span class="tag bg-emerald-50 text-emerald-700">二階備戰</span>
+                        </div>
+
+                        <div class="mb-8" data-date="4/1">
+                            <div class="flex flex-nowrap items-center gap-2 mb-3">
+                                 <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">4月初</span>
+                                 <h3 class="text-xl md:text-2xl font-bold text-slate-800 text-pretty">最後機會上傳</h3>
+                            </div>
+                            <ul class="space-y-2 pl-2">
+                                <li class="flex items-center gap-2 text-slate-600 font-medium text-base md:text-lg"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>高三下課程成果</li>
+                                <li class="flex items-center gap-2 text-slate-600 font-medium text-base md:text-lg"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>三年多元表現</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">全月重點</span>
+                            </div>
+                            <div class="grid grid-cols-1 gap-2">
+                                <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="bg-emerald-100 p-1.5 rounded text-emerald-600 shrink-0"><i data-lucide="pen-tool" class="w-4 h-4"></i></div>
+                                    <span class="text-base md:text-lg font-semibold text-slate-700 text-pretty">撰寫學習歷程自述 (OPQ)</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="bg-emerald-100 p-1.5 rounded text-emerald-600 shrink-0"><i data-lucide="layers" class="w-4 h-4"></i></div>
+                                    <span class="text-base md:text-lg font-semibold text-slate-700 text-pretty">多元綜整心得 (N)</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                                    <div class="bg-emerald-100 p-1.5 rounded text-emerald-600 shrink-0"><i data-lucide="mic" class="w-4 h-4"></i></div>
+                                    <span class="text-base md:text-lg font-semibold text-slate-700 text-pretty">準備面試與筆試</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://www.cac.edu.tw/apply115/guide.php" target="_blank" class="block w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg transition-colors text-base md:text-lg shadow-sm">
+                            <i data-lucide="book-open" class="w-4 h-4 inline mr-2 align-text-bottom"></i> 必看：審查資料準備指引
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- May -->
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row-reverse items-center w-full reveal group">
+                <div class="md:w-1/2 md:text-left md:pl-16 md:pr-0 pl-12 w-full mb-4 md:mb-0">
+                    <span class="text-5xl font-black text-slate-300 group-hover:text-slate-800 transition-colors duration-300 block leading-none">05</span>
+                    <span class="text-sm font-bold text-orange-500 uppercase tracking-widest">May</span>
+                </div>
+                
+                <div class="absolute left-[18px] md:left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rounded-full border-[3px] border-orange-500 shadow-sm z-10"></div>
+                
+                <div class="md:w-1/2 md:pr-16 w-full pl-12">
+                    <div class="modern-card p-5 md:p-8 border-l-[4px] border-l-orange-500 relative">
+                        
+                        <div class="flex justify-start md:justify-end mb-4">
+                             <span class="tag bg-orange-50 text-orange-700">面試月</span>
+                        </div>
+
+                        <ul class="space-y-8 text-left md:text-right">
+                             <li class="group/item flex flex-col md:items-end" data-date="4/30">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">4/30 ~ 5/6</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 text-pretty">上傳「審查資料」給大學端</h3>
+                                <a href="https://www.cac.edu.tw/apply115/dataupload.php" target="_blank" class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 px-3 py-1.5 rounded-lg transition-colors -mr-2">
+                                    <i data-lucide="upload-cloud" class="w-3.5 h-3.5 mr-1.5"></i> 上傳系統
+                                </a>
+                            </li>
+                            <li class="group/item flex flex-col md:items-end" data-date="5/14">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">5/14 起</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-1 text-pretty">大學二階面試起跑</h3>
+                                <p class="text-base md:text-lg text-slate-500 flex items-center gap-1 md:flex-row-reverse font-medium text-pretty"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-orange-500 shrink-0"></i> 記得提早規劃交通與住宿！</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jun -->
+            <div class="relative mb-16 md:mb-24 flex flex-col md:flex-row items-center w-full reveal group">
+                <div class="md:w-1/2 md:text-right md:pr-16 md:pl-0 pl-12 w-full mb-4 md:mb-0">
+                    <span class="text-5xl font-black text-slate-300 group-hover:text-slate-800 transition-colors duration-300 block leading-none">06</span>
+                    <span class="text-sm font-bold text-sky-500 uppercase tracking-widest">June</span>
+                </div>
+                
+                <div class="absolute left-[18px] md:left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rounded-full border-[3px] border-sky-500 shadow-sm z-10"></div>
+                
+                <div class="md:w-1/2 md:pl-16 w-full pl-12">
+                    <div class="modern-card p-5 md:p-8 border-l-[4px] border-l-sky-500 relative">
+                        <div class="flex justify-start mb-4">
+                             <span class="tag bg-sky-50 text-sky-700">榜單揭曉</span>
+                        </div>
+
+                        <ul class="space-y-8">
+                            <li class="group/item" data-date="6/1">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">6/1 前</span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 pl-1 text-pretty">各大學公告錄取名單</h3>
+                            </li>
+
+                            <li class="group/item p-4 bg-sky-50/50 rounded-xl border border-sky-100" data-date="6/4">
+                                 <div class="flex flex-nowrap items-center gap-2 md:gap-3 mb-2">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-white px-3 py-1 rounded-lg border border-slate-200 whitespace-nowrap">6/4 ~ 6/5</span>
+                                    <span class="countdown-badge ml-auto"></span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-1 text-pretty">上網登記志願序</h3>
+                                <p class="text-base text-slate-500 mb-3 font-medium text-pretty">只有兩天！最喜歡的校系填前面。</p>
+                                <a href="https://www.cac.edu.tw/apply115/rank.php" target="_blank" class="text-sm font-bold text-sky-600 hover:text-sky-800 flex items-center justify-end hover:underline">
+                                    前往登記網址 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                                </a>
+                            </li>
+
+                            <li class="group/item" data-date="6/11">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">6/11</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <h3 class="text-xl md:text-3xl font-bold text-indigo-600 pl-1 text-pretty">申請入學正式分發放榜 🎉</h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jul/Aug -->
+            <div class="relative mb-12 flex flex-col md:flex-row-reverse items-center w-full reveal group">
+                <div class="md:w-1/2 md:text-left md:pl-16 md:pr-0 pl-12 w-full mb-4 md:mb-0">
+                    <span class="text-5xl font-black text-slate-300 group-hover:text-slate-800 transition-colors duration-300 block leading-none">7-8</span>
+                    <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Summer</span>
+                </div>
+                
+                <div class="absolute left-[18px] md:left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rounded-full border-[3px] border-slate-500 shadow-sm z-10"></div>
+                
+                <div class="md:w-1/2 md:pr-16 w-full pl-12">
+                    <div class="modern-card p-5 md:p-8 border-l-[4px] border-l-slate-500 relative">
+                        
+                         <div class="flex justify-start mb-4">
+                             <span class="tag bg-slate-100 text-slate-700">最後戰役</span>
+                        </div>
+
+                        <h3 class="text-xl md:text-2xl font-bold text-slate-800 mb-2 md:text-right">分科測驗</h3>
+                        <p class="text-base md:text-lg text-slate-500 font-medium mb-6 md:text-right">給堅持到底的戰士們 Respect 🫡</p>
+                        
+                        <ul class="space-y-6 text-left md:text-right">
+                            <li class="group/item flex flex-col md:items-end" data-date="7/11">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">7/11 ~ 7/12</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <span class="text-xl md:text-2xl text-slate-700 font-bold text-pretty">分科測驗考試</span>
+                            </li>
+                            <li class="group/item flex flex-col md:items-end" data-date="7/29">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-lg whitespace-nowrap">7/29 ~ 8/4</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <span class="text-xl md:text-2xl text-slate-700 font-bold text-pretty">成績公布與落點分析</span>
+                            </li>
+                             <li class="group/item flex flex-col md:items-end bg-slate-50 p-4 rounded-lg border border-slate-200" data-date="8/13">
+                                <div class="flex flex-nowrap items-center gap-2 mb-1 md:flex-row-reverse">
+                                    <span class="font-mono text-lg md:text-xl font-bold text-slate-500 bg-white border border-slate-200 px-3 py-1 rounded-lg whitespace-nowrap">8/13</span>
+                                    <span class="countdown-badge"></span>
+                                </div>
+                                <span class="text-xl md:text-2xl font-bold text-indigo-600 text-pretty">分科測驗放榜</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="window.scrollTo(0,0)" class="fixed bottom-6 right-6 bg-white text-slate-800 p-3 rounded-full shadow-lg border border-slate-200 hover:shadow-xl hover:-translate-y-1 transition-all z-40 no-print group">
+        <i data-lucide="arrow-up" class="w-5 h-5 group-hover:-translate-y-0.5 transition-transform"></i>
+    </button>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+
+        // Progress Bar
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+            
+            // Header shadow
+            const header = document.getElementById('main-header');
+            if (winScroll > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        };
+
+        // Countdown Logic
+        function updateCountdowns() {
+            const now = new Date();
+            const currentYear = now.getFullYear(); // 115 級對應 2026
+
+            const events = [
+                { date: new Date(currentYear, 1, 25), name: "學測放榜 (2/25)" },
+                { date: new Date(currentYear, 2, 11), name: "繁星報名 (3/11)" },
+                { date: new Date(currentYear, 2, 23), name: "申請入學報名 (3/23)" },
+                { date: new Date(currentYear, 2, 31), name: "一階放榜 (3/31)" },
+                { date: new Date(currentYear, 3, 30), name: "資料上傳 (4/30)" },
+                { date: new Date(currentYear, 5, 4),  name: "志願選填 (6/4)" },
+                { date: new Date(currentYear, 6, 11), name: "分科測驗 (7/11)" }
+            ];
+
+            const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            let nextEvent = events.find(event => event.date >= todayMidnight);
+            
+            if (!nextEvent) {
+                nextEvent = events[0]; 
+                nextEvent.date.setFullYear(currentYear + 1);
+            }
+
+            // Big Countdown
+            const titleEl = document.getElementById('countdown-title');
+            if(titleEl) titleEl.textContent = `距離 ${nextEvent.name}`;
+
+            const diff = nextEvent.date - todayMidnight;
+            const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            
+            document.getElementById('countdown-days').textContent = days;
+
+            // Small Badges
+            const items = document.querySelectorAll('[data-date]');
+            items.forEach(item => {
+                const dateStr = item.getAttribute('data-date');
+                const badge = item.querySelector('.countdown-badge');
+                if(!badge) return;
+
+                const [month, day] = dateStr.split('/').map(Number);
+                const targetDate = new Date(currentYear, month - 1, day);
+                
+                const timeDiff = targetDate - todayMidnight;
+                const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+                // Modern badge style
+                // Updated to text-sm and px-3 based on user feedback
+                badge.className = 'countdown-badge text-xs md:text-sm font-bold px-2 md:px-3 py-1 rounded-md whitespace-nowrap ml-auto md:ml-2';
+
+                if (daysDiff > 0) {
+                    if (daysDiff <= 7) {
+                        badge.classList.add('bg-rose-100', 'text-rose-700');
+                        badge.textContent = `剩 ${daysDiff} 天 ⚠️`;
+                    } else {
+                        badge.classList.add('bg-indigo-50', 'text-indigo-600');
+                        badge.textContent = `還有 ${daysDiff} 天`;
+                    }
+                } else if (daysDiff === 0) {
+                    badge.classList.add('bg-rose-600', 'text-white', 'animate-pulse');
+                    badge.textContent = '就是今天！🔥';
+                } else {
+                    badge.classList.add('bg-slate-100', 'text-slate-400');
+                    badge.textContent = '已結束';
+                }
+            });
+        }
+
+        updateCountdowns();
+        setInterval(updateCountdowns, 1000 * 60 * 60); 
+
+        // Copy Text
+        function copyTimelineText() {
+            const textToCopy = `【115級 高三生升學重要時程懶人包】\n
+📅 二月
+• 2/25：學測成績公布
+• 2/26：開始進行落點分析
+
+📅 三月
+• 3/11-18：繁星推薦報名與放榜
+  🔗 繁星錄取結果查詢：https://www.cac.edu.tw/star115/dispense.php
+• 3/23-25：申請入學報名
+• 3/31：一階篩選放榜
+  🔗 查詢結果：https://www.cac.edu.tw/apply115/result.php
+
+📅 四月
+• 4月初：上傳高三下成果與多元表現
+• 全月：準備審查資料與面試
+  🔗 審查資料準備指引：https://www.cac.edu.tw/apply115/guide.php
+
+📅 五月
+• 4/30-5/6：上傳審查資料
+  🔗 上傳系統：https://www.cac.edu.tw/apply115/dataupload.php
+• 5/14起：大學二階面試
+
+📅 六月
+• 6/4-5：上網登記志願序 (重要!)
+  🔗 登記網址：https://www.cac.edu.tw/apply115/rank.php
+• 6/11：申請入學分發放榜
+
+📅 七/八月 (分科測驗)
+• 7/11-12：分科測驗考試
+• 7/29-8/4：成績公布
+• 8/13：分科測驗放榜
+
+📌 祝大家金榜題名！`;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            textarea.style.position = 'fixed';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                
+                // Change Button Text to "Copied"
+                const btn = document.getElementById('copy-btn');
+                // Store original HTML to revert back later
+                if (!btn.getAttribute('data-original-html')) {
+                    btn.setAttribute('data-original-html', btn.innerHTML);
+                }
+                
+                // Update styling to indicate success
+                btn.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i><span class="hidden md:inline">已複製</span><span class="md:hidden">已複製</span>`;
+                btn.classList.add('bg-green-50', 'text-green-700', 'border-green-200');
+                btn.classList.remove('text-slate-600', 'hover:text-slate-900');
+                
+                lucide.createIcons(); // Re-render the new check icon
+
+                // Revert back after 2 seconds
+                setTimeout(() => {
+                    btn.innerHTML = btn.getAttribute('data-original-html');
+                    btn.classList.remove('bg-green-50', 'text-green-700', 'border-green-200');
+                    btn.classList.add('text-slate-600', 'hover:text-slate-900');
+                    lucide.createIcons();
+                }, 2000);
+
+            } catch (err) {
+                console.error('複製失敗', err);
+                alert('複製失敗，請手動複製');
+            }
+            
+            document.body.removeChild(textarea);
+        }
+    </script>
+</body>
+</html>
